@@ -59,7 +59,7 @@ public class Main {
             System.out.print(i + " ");
             i++;
         }
-
+        System.out.println();
         // Используя for вывести каждое четное число от 2 до 20 включительно и больше 10
         System.out.println("----------------------- Третье практическое задание --------------------");
         for (int j = 1; j <= 20; j++) {
@@ -88,7 +88,7 @@ public class Main {
         System.out.println("----------------------- Пятое практическое задание --------------------");
         boolean exit;
         do {
-            System.out.println("Введите два числа, в случае выбора 1 программа завершится:");
+            System.out.println("Введите два числа, в случае выбора цифры 1 программа завершится:");
             exit = true;
             int a = line.nextInt();
             int b = line.nextInt();
@@ -131,6 +131,42 @@ public class Main {
             }
         System.out.println();
         }
+
+        System.out.println("----------------------- Домашнее  задание №1--------------------");
+        System.out.println("Введите число для проверки на четность");
+        HomeWork home = new HomeWork();
+        int z1 = line.nextInt();
+        home.even_odd(z1);
+
+        System.out.println("----------------------- Домашнее задание №2--------------------");
+        System.out.println("Введите температуру");
+        int z2 = line.nextInt();
+        home.temperature(z2);
+
+        System.out.println("----------------------- Домашнее задание №3--------------------");
+        System.out.println("Квадраты чисел от 10 до 20 равны ");
+        home.square();
+
+        System.out.println();
+        System.out.println("----------------------- Домашнее задание №4--------------------");
+        System.out.println("последовательность:  7 14 21 28 35 42 49 56 63 70 77 84 91 98");
+        home.subsequence();
+
+        System.out.println();
+        System.out.println("----------------------- Домашнее задание №5--------------------");
+        boolean err = false;
+        System.out.println("Введите целое положительное число");
+        int a = line.nextInt();
+        do {
+            err = false;
+             if (a <= 0){
+                System.out.println("Вы ввели число неудовлетворяющее условиям, введите заново");
+                 a = line.nextInt();
+                err = true;
+            }
+        }while (err == true);
+
+        home.sum(a);
 
     }
 
